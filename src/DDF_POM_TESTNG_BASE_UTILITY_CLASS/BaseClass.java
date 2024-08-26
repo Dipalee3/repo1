@@ -18,7 +18,14 @@ public class BaseClass {
 		
 	    driver.get(UtilityClass.getPropertyFileData("url")); //properties file data
 
+		driver = new ChromeDriver();
 		
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);//synchronization/wait
+		
+	    driver.get(UtilityClass.getPropertyFileData("url")); //properties file data
+
 		
 	}
 }
